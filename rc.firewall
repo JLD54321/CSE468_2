@@ -325,6 +325,7 @@ $IPTABLES -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
 #
 $IPTABLES -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
 $IPTABLES -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT
+$IPTABLES -A OUTPUT -p icmp -o enp0s9 -j DROP
 #
 # Provide your output rules below
 #
